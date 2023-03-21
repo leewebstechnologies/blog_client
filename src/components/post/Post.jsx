@@ -1,34 +1,26 @@
 import "./post.css";
+import { Link } from "react-router-dom";
 
-const Post = () => {
+const Post = ({ post }) => {
+  const PF = "http://localhost:5000/images/";
   return (
     <div className="post">
-      <img
-        className="postImg"
-        src="https://images.unsplash.com/photo-1655671051848-28022f1dc3f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-        alt=""
-      />
+      {post.photo && <img className="postImg" src={PF + post.photo} alt="" />}
       <div className="postInfo">
         <div className="postCats">
-          <span className="postCat">Lecture</span>
-          <span className="postCat">Life</span>
+          {post.categories.map((c) => (
+            <span className="postCat">{c.name}</span>
+          ))}
         </div>
-        <span className="postTitle">Lorem, ipsum dolor sit amet</span>
+        <Link to={`/post/${post._id}`} className="link">
+          <span className="postTitle">{post.title}</span>
+        </Link>
         <hr />
-        <span className="postDate">1 hour ago</span>
+        <span className="postDate">
+          {new Date(post.createdAt).toDateString()}
+        </span>
       </div>
-      <p className="postDesc">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-        aperiam doloribus nulla facilis reiciendis fuga nisi quaerat ipsam ad
-        dolorem, eum, accusantium velit earum cum doloremque error ab impedit
-        mollitia! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Tempore aperiam doloribus nulla facilis reiciendis fuga nisi quaerat
-        ipsam ad dolorem, eum, accusantium velit earum cum doloremque error ab
-        impedit mollitia! Lorem ipsum dolor sit, amet consectetur adipisicing
-        elit. Tempore aperiam doloribus nulla facilis reiciendis fuga nisi
-        quaerat ipsam ad dolorem, eum, accusantium velit earum cum doloremque
-        error ab impedit mollitia!
-      </p>
+      <p className="postDesc">{post.desc}</p>
     </div>
   );
 };
