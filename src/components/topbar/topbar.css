@@ -1,0 +1,153 @@
+.topbar {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  z-index: 999;
+}
+
+.topbarLeft,
+.topbarRight {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbarCenter {
+  flex: 6;
+}
+
+.topbarIcon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #444;
+  cursor: pointer;
+}
+
+.topbarImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.topbarList {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topbarListItem {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.topbarSearchIcon {
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.top__toggle {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .topbar {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: "Josefin Sans", sans-serif;
+    z-index: 999;
+    margin-right: 60px;
+
+  }
+  .topbarList {
+    /* margin-left: -40px; */
+    width: 80px;
+    margin-left: 40px;
+    margin-right: 25px;
+  }
+
+  .top__toggle {
+    font-size: 1.5rem;
+    display: contents;
+    color: #000;
+    cursor: pointer;
+    margin-right: 2rem;
+  }
+  .topbarLeft {
+    margin-left: 50px;
+  }
+
+  .topbarListItem {
+    font-size: 10px;
+    margin-right: 5px;
+  
+  }
+  .topbarIcon {
+    font-size: 15px;
+    margin-right: 5px;
+  }
+  .topbarSearchIcon {
+    font-size: 10px;
+    margin-left: 1px;
+    margin-right: 10px;
+  }
+  .top__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    width: 40%;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* margin-inline: 2rem; */
+    /* padding: 1rem 2rem; */
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    transition: 0.3s;
+    margin-top: -25px;
+    margin-left: 50px;
+  }
+
+  .link {
+    font-size: 10px;
+    color: #000;
+    text-decoration: none;
+    margin-right: 2px;
+    padding-right: 5px;
+  }
+
+  .link.active {
+    color: blue;
+  }
+
+
+  .top__menu.show-menu {
+    top: 80px;
+  }
+  .bx {
+    margin-top: 3px;
+  }
+}
