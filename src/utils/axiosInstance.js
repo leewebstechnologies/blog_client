@@ -3,8 +3,8 @@ import axios from "axios";
 let headers = {};
 
 const axiosInstance = axios.create({
-  // baseURL: 'https://cleanhubserver.herokuapp.com/',
-  baseURL: "http://localhost:5000/api/",
+  baseURL: "https://adeniyiajibadesblog.onrender.com",
+  // baseURL: "http://localhost:5000/api/",
   headers,
 });
 
