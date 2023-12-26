@@ -18,7 +18,7 @@ const Register = () => {
         email,
         password,
       });
-      res.data && window.location.replace("/login");
+      res.data && window.location.replace("/");
     } catch (error) {
       setError(true);
     }
@@ -47,7 +47,6 @@ const Register = () => {
           type="password"
           placeholder="Enter your password..."
           onChange={(e) => setPassword(e.target.value)}
-          
         />
         <button className="registerButton" type="submit">
           Register
