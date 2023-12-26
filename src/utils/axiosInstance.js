@@ -3,7 +3,7 @@ import axios from "axios";
 let headers = {};
 
 const axiosInstance = axios.create({
-  baseURL: "https://adeniyiajibadesblog.onrender.com",
+  baseURL: "https://adeniyiajibadesblog.onrender.com/api/",
   // baseURL: "http://localhost:5000/api/",
   headers,
 });
